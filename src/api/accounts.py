@@ -162,7 +162,7 @@ class ResetPassword(Resource):
         uuid = url_serializer.unload_token(token=token,salt='reset_password', max_age_seconds=300)
 
         if uuid == 'invalid':
-            return {'error': uuid}, 400
+            return {'error': 'არასწორი ტოკენი'}, 400
         elif uuid == 'expired':
             return {'error': 'არსებულ ტოკენს გაუვიდა ვადა'}, 400
         
