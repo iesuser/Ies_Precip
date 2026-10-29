@@ -59,7 +59,7 @@ class StationsListAPI(Resource):
 
         # მითითებული ლინკი იყოფა ნაწილებად, სადაც ბოლო ნაწილი ყოველთვის რჩება სადგურის ID რისი საშუალებითაც იქმნება API ლინკი
         shorten_station_name = args.get('url').split('/')[-1]
-        api_url = f'https://api.weather.com/v2/pws/observations/current?apiKey=e1f10a1e78da46f5b10a1e78da96f525&stationId={shorten_station_name}&numericPrecision=decimal&format=json&units=m'
+        api_url = f'https://api.weather.com/v2/pws/observations/current?apiKey=f6d2efe5720d47ea92efe5720df7eaa8&stationId={shorten_station_name}&numericPrecision=decimal&format=json&units=m'
 
         url = args.get('url')
 
@@ -174,7 +174,7 @@ class StationsAPI(Resource):
         # იქმნება ახალი API ლინკი ახალ url-ზე მორგებული 
 
         shorten_station_name = args.get('url').split('/')[-1]
-        api_url = f'https://api.weather.com/v2/pws/observations/current?apiKey=e1f10a1e78da46f5b10a1e78da96f525&stationId={shorten_station_name}&numericPrecision=decimal&format=json&units=m'
+        api_url = f'https://api.weather.com/v2/pws/observations/current?apiKey=f6d2efe5720d47ea92efe5720df7eaa8&stationId={shorten_station_name}&numericPrecision=decimal&format=json&units=m'
 
         # მონაცემები ნახლდება
         station.station_name = args.get('station_name')
